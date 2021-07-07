@@ -1,10 +1,7 @@
 * {
+    box-sizing: border-box;
     padding: 0;
     margin: 0;
-}
-
-:root {
-    font-size: 62.5%;
 }
 
 body {
@@ -19,8 +16,6 @@ body {
     left: 0;
     width: 505px;
     height: 505px;
-
-    transition: all 3s ease-in-out;
 }
 
 .parent h1 {
@@ -31,56 +26,29 @@ body {
     z-index: -1;
 }
 
-.parent div {
+.parent > div {
     display: inline-block;
     width: 250px;
     height: 250px;
-}
-
-
-.one,
-.two,
-.three,
-.four {
     transition: transform 1s linear;
-    -webkit-transition: transform 1s linear;
-    -moz-transition: transform 1s linear;
-    -ms-transition: transform 1s linear;
-    -o-transition: transform 1s linear;
 }
 
-.one:hover {
+.parent:hover .one {
     transform-origin: left top;
     transform: rotate(90deg);
-    -webkit-transform: rotate(90deg);
-    -moz-transform: rotate(90deg);
-    -ms-transform: rotate(90deg);
-    -o-transform: rotate(90deg);
 }
 
-.two:hover {
+.parent:hover .two {
     transform-origin: right top;
     transform: rotateZ(-90deg);
-    -webkit-transform: rotateZ(-90deg);
-    -moz-transform: rotateZ(-90deg);
-    -ms-transform: rotateZ(-90deg);
-    -o-transform: rotateZ(-90deg);
 }
 
-.three:hover {
+.parent:hover .three {
     transform-origin: left bottom;
     transform: rotateZ(-90deg);
-    -webkit-transform: rotateZ(-90deg);
-    -moz-transform: rotateZ(-90deg);
-    -ms-transform: rotateZ(-90deg);
-    -o-transform: rotateZ(-90deg);
 }
 
-.four:hover {
+.parent:hover .four {
     transform-origin: right bottom;
     transform: rotateZ(90deg);
-    -webkit-transform: rotateZ(90deg);
-    -moz-transform: rotateZ(90deg);
-    -ms-transform: rotateZ(90deg);
-    -o-transform: rotateZ(90deg);
 }
